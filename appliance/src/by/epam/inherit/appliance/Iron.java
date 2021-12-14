@@ -3,14 +3,14 @@ package by.epam.inherit.appliance;
 import java.util.Objects;
 
 public class Iron extends Appliance implements Goods{
-	private String type;
+	private IronType type;
 	
-	public Iron(String name, int lifespan, int price, String type) {
+	public Iron(String name, int lifespan, int price, IronType type) {
 		super(name, lifespan, price);
 		this.type=type;
 	}
 
-	public String getType() {
+	public IronType getType() {
 		return type;
 	}
 	

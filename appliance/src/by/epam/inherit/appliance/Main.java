@@ -6,6 +6,13 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		IronType iType1;
+		iType1=IronType.Classic;
+
+		IronType iType2;
+		iType2=IronType.Steamer;
+		
 		Appliance a1 = new Appliance("tool", 5, 11);
 		System.out.println(a1.info());
 
@@ -23,7 +30,7 @@ public class Main {
 		Television tv6 = new Television("TV6", 3, 98, 29);
 		System.out.println(tv1.info());
 
-		Appliance iron1 = new Iron("iron1", 1, 60, "steam");
+		Appliance iron1 = new Iron("iron1", 1, 60, iType1);
 		Washer washer1= new Washer ("washer1", 2, 34, 7);
 		CoffeeMachine coffee1= new CoffeeMachine("my precious", 3, 405, true);
 
@@ -48,7 +55,7 @@ public class Main {
 
 		System.out.println(stuff.contains(tv3));
 
-		System.out.println(stuff.contains(new Iron("iron1", 1, 60, "steam")));
+		System.out.println(stuff.contains(new Iron("iron1", 1, 60, iType1)));
 
 		List<Appliance> searchResult = new ArrayList<Appliance>();
 		for (int i = 0; i < stuff.size(); i++) {
@@ -62,7 +69,7 @@ public class Main {
 			System.out.println(searchResult.get(i).info());
 		}
 		
-		Goods iron2= new Iron("iron2", 1, 60, "steam");
+		Goods iron2= new Iron("iron2", 1, 60, iType2);
 		Book book1 = new Book ("Tom Sawyer","Mark Twain", 247);
 
 		Basket basket= new Basket(iron2);
